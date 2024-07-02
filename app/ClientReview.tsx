@@ -18,16 +18,15 @@ interface ClientReviewProps {
 export default function ClientReview(props: ClientReviewProps) {
     return (
         <>
-            <div className="flex gap-4 items-start">
-
-                <div className="text-nowrap flex flex-col items-center">
+            <div className="flex gap-4 items-start ">
+                <div className="text-nowrap flex flex-col items-center min-w-32">
                     <span className="text-center"><Image
                         src={props.avatar}
                         alt={`${props.name}`}
                         priority
                     /></span>
                     <p>{props.name}</p>
-                    <span>Ch{props.address}</span>
+                    <span>{props.address}</span>
                 </div>
                 <div>
                     <div className="flex space-x-4 items-center">
@@ -43,7 +42,7 @@ export default function ClientReview(props: ClientReviewProps) {
                         </div>
                     </div>
                     <p className="italic font-gothamLight text-sm">
-                        "This lawyer exceeds my expectations. I found Attorney Mullen to be very reliable, courteous and prompt..."
+                        "{props.reviewText}"
                     </p>
                     <a href="/" className="flex float-right font-gothamLight text-xs text-[#d89108]">
                         Read Review <Image
@@ -55,7 +54,7 @@ export default function ClientReview(props: ClientReviewProps) {
                 </div>
 
             </div>
-            <hr className='my-4' />
+            <hr className='my-4 opacity-25' />
         </>
     )
 }

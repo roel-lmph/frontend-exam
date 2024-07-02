@@ -23,14 +23,14 @@ const reviews = [
     name: "Joel C.",
     address: "Little Rock, AK",
     category: "Job & Employment Law",
-    reviewText: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero",
+    reviewText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ... dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip",
   },
   {
     avatar: avatar3,
-    name: "Joel C.",
-    address: "Little Rock, AK",
+    name: "Brigada R.",
+    address: "Dallas, TX",
     category: "Family Law",
-    reviewText: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero",
+    reviewText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut ... ",
   },
 ]
 

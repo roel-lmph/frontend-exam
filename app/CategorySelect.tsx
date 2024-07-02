@@ -11,7 +11,7 @@ export default function CategorySelect() {
             </div>
             <div className="relative mt-2 rounded-full h-14">
                 <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
-                    <NumberBadge num={1} />
+                    <NumberBadge num={2} />
                 </div>
                 <select
                     id="category"
