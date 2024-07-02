@@ -1,11 +1,9 @@
-import MyOwnModal from "./MyOwnModal";
 import Header from "@/components/Header";
-import Badge from "@/components/Badge";
 import ClientReview from "./ClientReview";
 
-import avatar1 from '../public/avatar1.png'
-import avatar2 from '../public/avatar2.png'
-import avatar3 from '../public/avatar3.png'
+import avatar1 from '../../public/avatar1.png'
+import avatar2 from '../../public/avatar2.png'
+import avatar3 from '../../public/avatar3.png'
 import ZipCodeInput from "./ZipCodeInput";
 import CategorySelect from "./CategorySelect";
 import Footer from "@/components/Footer";
@@ -41,7 +39,7 @@ export default function Home() {
     <main className="">
       <Header />
       {/* <MyOwnModal /> */}
-      <div id="content">
+      <div id="content" className="bg-gradient-to-br from-[#042F6E] to-white">
         <div className="container">
           <div className="text-[41px] font-gothamLight">
             Find a Lawyer for your Legal Issue
@@ -62,16 +60,18 @@ export default function Home() {
                     <CategorySelect />
 
                   </div>
-                  <p className="text-center">
-                    Can't find your category? Click here.
+                  <p className="text-center font-gothamBook">
+                    Can't find your category? <a className="underline underline-offset-2">Click here.</a>
                   </p>
                 </div>
               </div>
               <div className="w-full md:w-1/2">
                 {/* Content for the second column */}
-                <div className="">
+                <div className="" id="client-reviews">
                   <p className="mb-2 text-2xl">Clients review LegalMatch lawyers</p>
-                  {reviews.map((review, i) => <ClientReview key={`r-${i}`} {...review} />)}
+                  {reviews.map((review, i) =>
+                    <ClientReview key={`r-${i}`} {...review} />
+                  )}
                 </div>
               </div>
             </div>

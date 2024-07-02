@@ -18,6 +18,7 @@ const config: Config = {
       fontFamily: {
         gothamLight: ["Gotham-Light", "sans-serif"],
         gothamMedium: ["Gotham-Medium", "sans-serif"],
+        gothamBook: ["Gotham-Book", "sans-serif"],
       },
 
     },

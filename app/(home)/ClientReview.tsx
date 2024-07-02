@@ -2,9 +2,9 @@ import React, { ReactNode } from 'react'
 
 import Image from "next/image";
 
-import avatar1 from '../public/avatar1.png'
-import fiveStars from '../public/5stars.png'
-import reviewIcon from '../public/review-icon.png'
+import avatar1 from '../../public/avatar1.png'
+import fiveStars from '../../public/5stars.png'
+import reviewIcon from '../../public/review-icon.png'
 import { StaticImport } from 'next/dist/shared/lib/get-img-props';
 
 interface ClientReviewProps {
@@ -50,6 +50,8 @@ export default function ClientReview(props: ClientReviewProps) {
                             alt="Review"
                             className="ml-1"
                             priority
+                            height={10}
+                            width={13}
                         /></a>
                 </div>
 

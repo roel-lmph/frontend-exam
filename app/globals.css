@@ -1,5 +1,13 @@
 @tailwind base;
 @tailwind components;
+
+/* Apply color to all form elements */
+input,
+select,
+textarea {
+  color: #242729;
+}
+
 @tailwind utilities;
 
 
@@ -14,9 +22,15 @@
   src: url("../public/fonts/Gotham/Gotham-Medium.otf");
 }
 
+@font-face {
+  font-family: "Gotham-Book";
+  src: url("../public/fonts/Gotham/Gotham-Book.otf");
+}
+
 body {
   color: #fff;
 }
+
 
 @layer utilities {
   .text-balance {
@@ -40,7 +54,7 @@ body {
 
 #content {
   padding-top: 35px;
-  background: rgb(4, 47, 110);
+  background: #042F6E;
 }
 
 .circle-badge {
@@ -55,4 +69,18 @@ body {
   font-weight: bold;
   font-size: 14px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.input-suggestions {
+  background: white;
+  color: #242729;
+  padding: 10px;
+  position: absolute;
+  left: 28px;
+  top: 58px;
+  font-size: smaller;
+}
+
+#client-reviews hr:last-child {
+  visibility: hidden;
 }
