@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@font-face {
+  font-family: "Gotham-Light";
+  src: url("../public/fonts/Gotham/Gotham-Light.otf");
+}
+
+@font-face {
+  font-family: "Gotham-Medium";
+  src: url("../public/fonts/Gotham/Gotham-Medium.otf");
+}
+
+body {
+  color: #fff;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1110px;
+  /* Content width as per PSD */
+  margin: 0 auto;
+  /* Center align the container */
+  box-sizing: border-box;
+  /* Include padding in the width calculation */
+}
+
+#header {
+  height: 90px;
+}
+
+#content {
+  padding-top: 35px;
+  background: rgb(4, 47, 110);
+}
+
+.circle-badge {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #d68d00;
+  color: white;
+  text-align: center;
+  line-height: 30px;
+  font-weight: bold;
+  font-size: 14px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
