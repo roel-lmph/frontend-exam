@@ -2,13 +2,17 @@
 
 import Modal from '@/components/Modal'
 import { otherCategories } from '@/dummy-data'
-import React from 'react'
+import { useModal } from '@/hooks/useModal'
+import React, { useEffect } from 'react'
 
 export default function OtherCategoriesModal() {
 
+    const modalName = 'other-categories'
+    const { activeModal } = useModal()
+    const isOpen = modalName == activeModal ? true : false
 
     return (
-        <Modal open={true} >
+        <Modal name={modalName} open={isOpen} >
             <div className=''>
                 <div className='title'>
                     OTHER CATEGORIES

@@ -1,10 +1,11 @@
+'use client'
+
 import React, { ReactNode } from 'react'
 
 import Image from "next/image";
-
-import fiveStars from '../../public/5stars.png'
-import reviewIcon from '../../public/review-icon.png'
 import { StaticImport } from 'next/dist/shared/lib/get-img-props';
+import { useModal } from '@/hooks/useModal';
+import { fiveStars, reviewIcon } from '@/app/assets';
 
 interface ClientReviewProps {
     avatar: StaticImport
@@ -15,6 +16,8 @@ interface ClientReviewProps {
 }
 
 export default function ClientReview(props: ClientReviewProps) {
+
+    const { setActiveModal } = useModal()
     return (
         <>
             <div className="flex gap-4 items-start ">
@@ -43,7 +46,7 @@ export default function ClientReview(props: ClientReviewProps) {
                     <p className="italic font-gothamLight text-sm">
                         "{props.reviewText}"
                     </p>
-                    <a href="/" className="flex float-right font-gothamLight text-xs text-[#d89108]">
+                    <span onClick={() => setActiveModal('client-reviews')} className="flex float-right font-gothamLight text-xs link text-[#d89108]">
                         Read Review <Image
                             src={reviewIcon}
                             alt="Review"
@@ -51,7 +54,8 @@ export default function ClientReview(props: ClientReviewProps) {
                             priority
                             height={10}
                             width={13}
-                        /></a>
+                        />
+                    </span>
                 </div>
 
             </div>

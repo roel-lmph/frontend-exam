@@ -59,6 +59,10 @@ body {
   color: #fff;
 }
 
+.link {
+  cursor: pointer;
+}
+
 .circle-badge {
   display: inline-block;
   width: 30px;

@@ -5,7 +5,8 @@ import NumberBadge from '@/components/NumberBadge'
 import Button from '@/components/forms/Button'
 import Checkbox from '@/components/forms/Checkbox'
 import { subCategories } from '@/dummy-data'
-import React from 'react'
+import { useModal } from '@/hooks/useModal'
+import React, { useEffect } from 'react'
 
 interface SubCategorySelectionModalProps {
     category: string
@@ -13,9 +14,12 @@ interface SubCategorySelectionModalProps {
 
 export default function SubCategorySelectionModal({ category = 'Family Law' }: SubCategorySelectionModalProps) {
 
+    const modalName = 'sub-categories'
+    const { activeModal } = useModal()
+    const isOpen = modalName == activeModal ? true : false
 
     return (
-        <Modal open={true}>
+        <Modal name={modalName} open={isOpen}>
             <div className='flex flex-col space-y-8 max-w-[600px] py-10'>
                 <div className='flex items-center gap-x-4'>
                     <div>

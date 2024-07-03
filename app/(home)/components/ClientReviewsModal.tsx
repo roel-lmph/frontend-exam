@@ -4,15 +4,20 @@ import Modal from '@/components/Modal'
 import React from 'react'
 import Image from "next/image";
 import { ratings, reviews } from '@/dummy-data';
-import { fiveStars } from '../assets';
+import { fiveStars } from '../../assets';
 import RatingItem from '@/components/RatingItem';
+import { useModal } from '@/hooks/useModal';
 
 export default function ClientReviewsModal() {
 
     const review = reviews[2]
 
+    const modalName = 'client-reviews'
+    const { activeModal } = useModal()
+    const isOpen = modalName == activeModal ? true : false
+
     return (
-        <Modal open={true} title='CLIENT REVIEWS' showFooterClose={true}>
+        <Modal name={modalName} open={isOpen} title='CLIENT REVIEWS' showFooterClose={true}>
             <div className=''>
                 <div className='flex'>
 

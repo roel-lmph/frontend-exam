@@ -1,17 +1,27 @@
 'use client'
 
+import { useModal } from '@/hooks/useModal';
 import { X } from 'lucide-react';
 import React, { ReactNode, useEffect, useRef } from 'react'
 
 interface ModalProps {
-    open: boolean
+    name: string;
+    open?: boolean
     children: ReactNode
     title?: ReactNode | string
     showFooterClose?: boolean
 }
 
-export default function Modal({ open, children, title, showFooterClose = false }: ModalProps) {
+export default function Modal({ name, open, children, title, showFooterClose = false }: ModalProps) {
     const dialogRef = useRef<HTMLDialogElement | null>(null);
+
+    const { activeModal, register: registerModal, modals, setActiveModal } = useModal()
+
+    console.log(activeModal, modals)
+
+    useEffect(() => {
+        registerModal(name)
+    }, [name, registerModal])
 
     useEffect(() => {
         if (open) {
@@ -30,14 +40,15 @@ export default function Modal({ open, children, title, showFooterClose = false }
     function closeDialog() {
         dialogRef.current?.close();
         document.body.style.overflow = '';
+
+        setActiveModal('')
     }
 
     return (
         <dialog ref={dialogRef} className="relative overflow-visible backdrop:bg-black/85 bg-transparent">
-
             <div
                 className="bg-white max-h-[90vh] max-w-[90vw] rounded-md px-4 ">
-                {title && <div className='p-2'>
+                {title && <div className='px-7 py-4'>
                     {title}
                     <hr className='opacity-75' />
                 </div>}
@@ -47,7 +58,7 @@ export default function Modal({ open, children, title, showFooterClose = false }
                 >
                     <X className='text-gray-500' />
                 </button>
-                <div className='modal-body py-4 w-[600px]'>
+                <div className='modal-body py-4 w-[600px] px-7 py-4'>
                     {children}
                 </div>
                 {showFooterClose && <div className='flex justify-end pb-4'>

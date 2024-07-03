@@ -3,21 +3,27 @@
 import React, { useState } from 'react';
 import NumberBadge from '@/components/NumberBadge';
 import Image from 'next/image'
-import dropdownIcon from '../../public/dropdown-arrow-icon.png'
 import SubCategorySelectionModal from './SubCategorySelectionModal';
 import { categories } from '@/dummy-data';
+import { useModal } from '@/hooks/useModal';
+import { dropdownIcon } from '@/app/assets';
 
 
 
 export default function CategorySelect() {
 
-    const [category, setCategory] = useState('Family Law')
+
+    const { setActiveModal } = useModal()
+    const [category, setCategory] = useState('')
+
+
     const handleSelectCategory = (e: { target: { value: string; }; }) => {
-
         const val = e.target.value
-        setCategory(category)
-
+        setCategory(val)
+        setActiveModal('sub-categories')
     }
+
+
     return (
         <>
             <div className="relative">
