@@ -1,8 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 
-import logo from '../public/logo.png'
-import topRightImage from '../public/top-right-image.jpg'
+import { logoFooter, topRightImage } from '@/app/assets'
 
 export default function Header() {
     const subTitle = 'FIND THE RIGHT LAWYER'
@@ -12,7 +11,7 @@ export default function Header() {
                 <div className='flex items-end'>
                     <a href='/' title={'LegalMatch - ' + subTitle}>
                         <Image
-                            src={logo}
+                            src={logoFooter}
                             alt="LegalMatch Logo"
                             priority
 

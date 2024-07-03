@@ -1,6 +1,6 @@
-import avatar3 from './public/avatar3.png'
-import avatar2 from './public/avatar2.png'
-import avatar1 from './public/avatar1.png'
+import avatar3 from './public/images/avatar3.png'
+import avatar2 from './public/images/avatar2.png'
+import avatar1 from './public/images/avatar1.png'
 
 export const categories = [
     'Family',

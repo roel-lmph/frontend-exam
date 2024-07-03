@@ -1,8 +1,6 @@
+import { logoFooter } from '@/app/assets'
 import Image from 'next/image'
 import React from 'react'
-
-import logo from '../public/logo-footer.png'
-import topRightImage from '../public/top-right-image.jpg'
 
 export default function Footer() {
     return (
@@ -10,7 +8,7 @@ export default function Footer() {
             <div className='container flex sm:flex-row justify-between items-center'>
                 <div className='flex flex-col items-center'>
                     <Image
-                        src={logo}
+                        src={logoFooter}
                         alt="LegalMatch Logo"
                         priority
                         width={180}
@@ -18,7 +16,7 @@ export default function Footer() {
                 </div>
                 <div className='flex flex-col items-center'>
                     <Image
-                        src={logo}
+                        src={logoFooter}
                         alt="LegalMatch Logo"
                         priority
                         width={180}
@@ -26,7 +24,7 @@ export default function Footer() {
                 </div>
                 <div className='flex flex-col items-center'>
                     <Image
-                        src={logo}
+                        src={logoFooter}
                         alt="LegalMatch Logo"
                         priority
                         width={180}
