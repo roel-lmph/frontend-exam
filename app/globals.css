@@ -1,6 +1,12 @@
 @tailwind base;
 @tailwind components;
 
+
+body {
+  color: #4e555c;
+
+}
+
 /* Apply color to all form elements */
 input,
 select,
@@ -27,17 +33,6 @@ textarea {
   src: url("../public/fonts/Gotham/Gotham-Book.otf");
 }
 
-body {
-  color: #4e555c;
-
-}
-
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
 
 .container {
   width: 100%;
