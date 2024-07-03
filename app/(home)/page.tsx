@@ -8,19 +8,17 @@ import InquiryForm from "./components/InquiryForm";
 
 export default function Home() {
   return (
-    <main className="">
+    <>
       <Header />
-      <div id="content" className="bg-gradient-to-br from-[#042F6E] to-white">
+      <main id="content" className="bg-gradient-to-br from-[#042F6E] to-white">
         <div className="container">
 
           <InquiryForm />
         </div>
-      </div>
-      <section className="pt-9">
-        <Footer />
-      </section>
+      </main>
+      <Footer />
       <ClientReviewsModal />
       <OtherCategoriesModal />
-    </main>
+    </>
   );
 }
