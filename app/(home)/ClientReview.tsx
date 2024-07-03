@@ -2,7 +2,6 @@ import React, { ReactNode } from 'react'
 
 import Image from "next/image";
 
-import avatar1 from '../../public/avatar1.png'
 import fiveStars from '../../public/5stars.png'
 import reviewIcon from '../../public/review-icon.png'
 import { StaticImport } from 'next/dist/shared/lib/get-img-props';

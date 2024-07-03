@@ -1,52 +1,55 @@
-import React from 'react';
+'use client'
+
+import React, { useState } from 'react';
 import NumberBadge from '@/components/NumberBadge';
 import Image from 'next/image'
 import dropdownIcon from '../../public/dropdown-arrow-icon.png'
+import SubCategorySelectionModal from './SubCategorySelectionModal';
+import { categories } from '@/dummy-data';
 
-const categories = [
-    'Family',
-    'Criminal Defense',
-    'Business',
-    'Personal Injury',
-    'Bankruptcy & Finances',
-    'Products & Services',
-    'Employment',
-    'Real Estate',
-    'Immigration',
-    'Wills, Trusts & Estates',
-    'Government',
-    'Intellectual Property',
-]
+
 
 export default function CategorySelect() {
+
+    const [category, setCategory] = useState('Family Law')
+    const handleSelectCategory = (e: { target: { value: string; }; }) => {
+
+        const val = e.target.value
+        setCategory(category)
+
+    }
     return (
-        <div className="relative">
-            <div >
-                Choose a category:
-            </div>
-            <div className="relative mt-2 rounded-full h-14">
-                <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
-                    <NumberBadge num={2} />
+        <>
+            <div className="relative">
+                <div >
+                    Choose a category:
                 </div>
-                <select
-                    id="category"
-                    name="category"
-                    title='Category'
-                    className="dropdown-select block appearance-none w-full h-full bg-white border border-gray-300 rounded-full py-3 pl-14 text-gray-400 placeholder:text-gray-400 pr-8 focus:outline-none focus:bg-white focus:border-indigo-600 sm:text-sm"
-                    defaultValue=""
-                >
-                    <option value="" disabled hidden>Click to choose a legal category</option>
-                    {categories.map(cat => <option key={cat} className='px-2' value={cat}>{cat}</option>)}
-                </select>
-                <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-                    <Image
-                        src={dropdownIcon}
-                        alt="Category Select"
-                        priority
-                        className='opacity-50'
-                    />
+                <div className="relative mt-2 rounded-full h-14">
+                    <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+                        <NumberBadge num={2} />
+                    </div>
+                    <select
+                        id="category"
+                        name="category"
+                        title='Category'
+                        className="dropdown-select block appearance-none w-full h-full bg-white border border-gray-300 rounded-full py-3 pl-14 text-gray-400 placeholder:text-gray-400 pr-8 focus:outline-none focus:bg-white focus:border-indigo-600 sm:text-sm"
+                        defaultValue={category}
+                        onChange={handleSelectCategory}
+                    >
+                        <option value="" disabled hidden>Click to choose a legal category</option>
+                        {categories.map(cat => <option key={cat} className='px-2' value={cat}>{cat}</option>)}
+                    </select>
+                    <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                        <Image
+                            src={dropdownIcon}
+                            alt="Category Select"
+                            priority
+                            className='opacity-50'
+                        />
+                    </div>
                 </div>
             </div>
-        </div>
+            <SubCategorySelectionModal category={category} />
+        </>
     );
 }

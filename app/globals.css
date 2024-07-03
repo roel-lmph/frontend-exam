@@ -28,7 +28,8 @@ textarea {
 }
 
 body {
-  color: #fff;
+  color: #4e555c;
+
 }
 
 
@@ -55,6 +56,7 @@ body {
 #content {
   padding-top: 35px;
   background: #042F6E;
+  color: #fff;
 }
 
 .circle-badge {

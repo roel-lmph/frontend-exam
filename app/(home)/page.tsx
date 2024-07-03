@@ -7,30 +7,9 @@ import avatar3 from '../../public/avatar3.png'
 import ZipCodeInput from "./ZipCodeInput";
 import CategorySelect from "./CategorySelect";
 import Footer from "@/components/Footer";
-
-const reviews = [
-  {
-    avatar: avatar1,
-    name: "Mitchell M.",
-    address: "Cherry Hill, NJ",
-    category: "Family Law",
-    reviewText: "This lawyer exceeds my expectations. I found Attorney Mullen to be very reliable, courteous and prompt...",
-  },
-  {
-    avatar: avatar2,
-    name: "Joel C.",
-    address: "Little Rock, AK",
-    category: "Job & Employment Law",
-    reviewText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ... dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip",
-  },
-  {
-    avatar: avatar3,
-    name: "Brigada R.",
-    address: "Dallas, TX",
-    category: "Family Law",
-    reviewText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut ... ",
-  },
-]
+import ClientReviewsModal from "./ClientReviewsModal";
+import { reviews } from "@/dummy-data";
+import OtherCategoriesModal from "./OtherCategoriesModal";
 
 
 
@@ -73,6 +52,7 @@ export default function Home() {
                     <ClientReview key={`r-${i}`} {...review} />
                   )}
                 </div>
+
               </div>
             </div>
           </div>
@@ -81,6 +61,8 @@ export default function Home() {
       <section className="pt-9">
         <Footer />
       </section>
+      <ClientReviewsModal />
+      <OtherCategoriesModal />
     </main>
   );
 }
