@@ -14,8 +14,10 @@ export default function Header() {
                             src={logoHeader}
                             alt="LegalMatch Logo"
                             priority
+                            className='header-logo'
 
-                        /></a>
+                        />
+                    </a>
                     <div className='text-[#012666]  pb-2 font-semibold'>
                         {subTitle}
                     </div>

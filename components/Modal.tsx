@@ -15,9 +15,7 @@ interface ModalProps {
 export default function Modal({ name, open, children, title, showFooterClose = false }: ModalProps) {
     const dialogRef = useRef<HTMLDialogElement | null>(null);
 
-    const { activeModal, register: registerModal, modals, setActiveModal } = useModal()
-
-    console.log(activeModal, modals)
+    const { register: registerModal, modals, setActiveModal } = useModal()
 
     useEffect(() => {
         registerModal(name)

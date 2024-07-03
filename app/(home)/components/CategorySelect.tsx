@@ -14,26 +14,8 @@ import { useOnClickOutside } from 'usehooks-ts';
 export default function CategorySelect() {
     const ref = useRef(null)
 
-
     const { setActiveModal } = useModal()
     const [category, setCategory] = useState('Click to choose a legal category')
-
-
-    const handleSelectCategory = (e: { target: { value: string; }; }) => {
-        const val = e.target.value
-        setCategory(val)
-        setActiveModal('sub-categories')
-    }
-
-    const handleSelectClick = (e: { preventDefault: () => void; }) => {
-        e.preventDefault()
-        return false
-    }
-
-
-    const preventDefault = (event: React.MouseEvent<HTMLSelectElement, MouseEvent>) => {
-        event.preventDefault();
-    };
 
     const [showDropdown, setShowDropdown] = useState(false)
     const handleSelect = (value: string) => {
@@ -59,19 +41,6 @@ export default function CategorySelect() {
                     <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
                         <NumberBadge num={2} />
                     </div>
-                    {/* <select
-                        id="category"
-                        name="category"
-                        title='Category'
-                        className="dropdown-select block appearance-none w-full h-full bg-white border border-gray-300 rounded-full py-3 pl-14 text-gray-400 placeholder:text-gray-400 pr-8 focus:outline-none focus:bg-white focus:border-indigo-600 sm:text-sm"
-                        defaultValue={category}
-                        onChange={handleSelectCategory}
-                        onClick={preventDefault}
-                        style={{ visibility: 'hidden' }}
-                    >
-                        <option value="" disabled hidden>Click to choose a legal category</option>
-                        {categories.map(cat => <option key={cat} className='px-2' value={cat}>{cat}</option>)}
-                    </select> */}
                     <span className="pt-[18px] dropdown-select block appearance-none w-full h-full bg-white border border-gray-300 rounded-full py-3 pl-14 text-gray-400 placeholder:text-gray-400 pr-8 focus:outline-none focus:bg-white focus:border-indigo-600 sm:text-sm">
                         {category}
                     </span>

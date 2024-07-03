@@ -14,10 +14,11 @@ export default function Home() {
         <div className="container">
           <InquiryForm />
         </div>
+
+        <ClientReviewsModal />
+        <OtherCategoriesModal />
       </main>
       <Footer />
-      <ClientReviewsModal />
-      <OtherCategoriesModal />
     </>
   );
 }

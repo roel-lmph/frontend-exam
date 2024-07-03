@@ -20,7 +20,7 @@ const Checkbox: React.FC<CheckboxProps> = ({ label, checked, onChange }) => {
                 checked={checked}
                 onChange={handleChange}
             />
-            <span className="ml-2">{label}</span>
+            <span className="ml-2 text-sm text-nowrap">{label}</span>
         </label>
     );
 };

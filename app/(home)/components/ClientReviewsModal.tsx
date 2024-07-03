@@ -31,7 +31,7 @@ export default function ClientReviewsModal() {
                     </div>
                     <div>
                         <p>{review.name}</p>
-                        <span>{review.address}</span>
+                        <span className='text-gray-300'>{review.address}</span>
                         <p>{review.category}</p>
                     </div>
                 </div>

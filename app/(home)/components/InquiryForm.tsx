@@ -12,10 +12,10 @@ export default function InquiryForm() {
     const { setActiveModal } = useModal()
     return (
         <>
-            <div className="font-gothamLight text-[41px]">
+            <div className="font-gothamLight text-[41px] inquiry-title">
                 Find a Lawyer for your Legal Issue
             </div>
-            <div className="text-[29px]">
+            <div className="text-[29px] inquiry-subtitle">
                 Fast, Free and Confidential
             </div>
 
@@ -23,7 +23,7 @@ export default function InquiryForm() {
                 <div className="flex flex-wrap">
                     <div className="w-full md:w-1/2">
                         {/* Content for the first column */}
-                        <div className="pt-10 flex flex-col gap-y-8 w-3/4">
+                        <div id="inquiry-form-fields" className="pt-10 sm:pt-14 flex flex-col gap-y-8 w-3/4">
                             <div >
                                 <ZipCodeInput />
                             </div>
