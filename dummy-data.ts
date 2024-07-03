@@ -78,3 +78,7 @@ export const ratings = [
     { title: 'Would hire again', rating: 4 },
     { title: 'Would recommend to friend', rating: 5 },
 ]
+
+export const zipCodes = [
+    { id: 1, value: 'Noweheresville, XX', zipCode: '00000' },
+];

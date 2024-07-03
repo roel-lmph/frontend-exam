@@ -2,26 +2,13 @@
 
 import InputSuggestions from "@/components/InputSuggestions";
 import NumberBadge from "@/components/NumberBadge";
+import { zipCodes } from "@/dummy-data";
 import { useState } from "react";
 
 export default function ZipCodeInput() {
 
-    const zipCodes = [
-        { id: 1, value: 'Noweheresville, XX', zipCode: '00000' },
-    ];
 
-    const renderSuggestions = () => {
-        return (
-            <ul className="input-suggestions">
-                <li
-                    key={'suggestion.id'}
-                    className="suggestion-item"
-                >
-                    Nowheresville, XX <a href="/">00000</a>
-                </li>
-            </ul>
-        );
-    };
+
     const [inputVal, setInputVal] = useState<string>('')
     const [suggestions, setSuggestions] = useState<string[]>([])
 
@@ -33,6 +20,11 @@ export default function ZipCodeInput() {
         setSuggestions(matches?.map(m => m.value))
     }
 
+
+    const handleSuggestionOnClick = (suggestion: string) => {
+        setSuggestions([])
+        setInputVal(suggestion)
+    }
 
     return (
         <div>
@@ -51,8 +43,9 @@ export default function ZipCodeInput() {
                     placeholder="Does not have to be where you live"
                     autoComplete="off"
                     onChange={handleOnChange}
+                    value={inputVal}
                 />
-                <InputSuggestions input={inputVal} suggestions={suggestions} />
+                <InputSuggestions input={inputVal} suggestions={suggestions} onClick={handleSuggestionOnClick} />
             </div>
         </div>
     );
