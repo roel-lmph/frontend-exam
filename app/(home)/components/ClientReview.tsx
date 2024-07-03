@@ -5,7 +5,7 @@ import React, { ReactNode } from 'react'
 import Image from "next/image";
 import { StaticImport } from 'next/dist/shared/lib/get-img-props';
 import { useModal } from '@/hooks/useModal';
-import { fiveStars, reviewIcon } from '@/app/assets';
+import { stars, reviewIcon } from '@/app/assets';
 
 interface ClientReviewProps {
     avatar: StaticImport
@@ -37,7 +37,7 @@ export default function ClientReview(props: ClientReviewProps) {
                         </span>
                         <div>
                             <Image
-                                src={fiveStars}
+                                src={stars}
                                 alt="Five Stars"
                                 priority
                             />
@@ -52,8 +52,6 @@ export default function ClientReview(props: ClientReviewProps) {
                             alt="Review"
                             className="ml-1"
                             priority
-                            height={10}
-                            width={13}
                         />
                     </span>
                 </div>

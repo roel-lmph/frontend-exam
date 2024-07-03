@@ -1,5 +1,6 @@
 import fiveStars from '../../public/images/5stars.png'
 import fourStars from '../../public/images/4stars.png'
+import stars from '../../public/images/stars.png'
 import reviewIcon from '../../public/images/review-icon.png'
 import dropdownIcon from '../../public/images/dropdown-arrow-icon.png'
 
@@ -13,5 +14,6 @@ export {
     reviewIcon,
     dropdownIcon,
     topRightImage,
-    logoFooter
+    logoFooter,
+    stars
 }
