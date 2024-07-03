@@ -44,7 +44,7 @@ export default function ClientReview(props: ClientReviewProps) {
                         </div>
                     </div>
                     <p className="italic font-gothamLight text-sm">
-                        "{props.reviewText}"
+                        &quot;{props.reviewText}&quot;
                     </p>
                     <span onClick={() => setActiveModal('client-reviews')} className="flex float-right font-gothamLight text-xs link text-[#d89108]">
                         Read Review <Image

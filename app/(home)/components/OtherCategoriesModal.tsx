@@ -24,14 +24,14 @@ export default function OtherCategoriesModal() {
             <div className='pt-4 flex flex-wrap'>
                 {otherCategories.map(cat => {
                     return (<div key={cat} className=' w-1/2'>
-                        <span className='text-primary text-sm'>
+                        <span className='text-primary text-xs'>
                             {cat}
                         </span>
                     </div>)
                 })}
                 {otherCategories.reverse().map(cat => {
                     return (<div key={cat} className=' w-1/2'>
-                        <span className='text-primary text-sm'>
+                        <span className='text-primary text-xs'>
                             {cat}
                         </span>
                     </div>)

@@ -1,38 +1,66 @@
-import { logoFooter } from '@/app/assets'
+import { ARated, TrustSeal, logoFooter } from '@/app/assets'
 import Image from 'next/image'
 import React from 'react'
 
 export default function Footer() {
     return (
-        <section className="pt-9">
-            <footer className='bg-white flex' id='footer'>
-                <div className='container flex sm:flex-row justify-between items-center'>
-                    <div className='flex flex-col items-center'>
-                        <Image
-                            src={logoFooter}
-                            alt="LegalMatch Logo"
-                            priority
-                            width={180}
-                        />
-                    </div>
-                    <div className='flex flex-col items-center'>
-                        <Image
-                            src={logoFooter}
-                            alt="LegalMatch Logo"
-                            priority
-                            width={180}
-                        />
-                    </div>
-                    <div className='flex flex-col items-center'>
-                        <Image
-                            src={logoFooter}
-                            alt="LegalMatch Logo"
-                            priority
-                            width={180}
-                        />
+        <footer className="footer">
+            <section className="py-12">
+                <div className="mx-auto container">
+                    <div className="grid grid-cols-12 gap-5">
+                        <div className="col-span-12 md:col-span-6 lg:col-span-3">
+                            <div className="items-center">
+                                <Image
+                                    src={logoFooter}
+                                    alt="Legal Match"
+                                    priority
+                                />
+                            </div>
+                        </div>
+                        <div
+                            className="col-span-12 md:col-span-6 lg:col-span-7 text-center footer-text"
+                        >
+                            <div className="flex justify-center items-center">
+                                <div className="flex space-x-4 pb-5 text-gray-300">
+                                    <div className="p-2"><a href="#">User Agreement</a></div>
+                                    <div className="dot"><span>&#x25CF;</span></div>
+                                    <div className="p-2"><a href="#">Privacy Policy</a></div>
+                                    <div className="dot"><span>&#x25CF;</span></div>
+                                    <div className="p-2"><a href="#">Site Map</a></div>
+                                </div>
+                            </div>
+                            <small className="text-gray-300">
+                                Copyright 1999-2016 LegalMatch. All rights reserved. LegalMatch®,
+                                <br />
+                                the LegalMatch logo, and the tradedress are trademarks of
+                                LegalMatch. Patents Pending.
+                            </small>
+                        </div>
+                        <div className="col-span-12 md:col-span-6 lg:col-span-2 float-right">
+                            <div className="items-right">
+                                <div className="footer-image">
+                                    <button type="button" className="flex items-center py-1">
+                                        <Image
+                                            src={TrustSeal}
+                                            alt="Trust Seal"
+                                            className='footer-img'
+                                            priority
+                                        />
+                                    </button>
+                                    <button type="button" className="flex items-center">
+                                        <Image
+                                            src={ARated}
+                                            alt="ARated"
+                                            priority
+                                            className='footer-img'
+                                        />
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </footer>
-        </section>
+            </section>
+        </footer>
     )
 }

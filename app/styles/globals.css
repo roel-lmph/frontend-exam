@@ -20,17 +20,17 @@ textarea {
 
 @font-face {
   font-family: "Gotham-Light";
-  src: url("../public/fonts/Gotham/Gotham-Light.otf");
+  src: url("../../public/fonts/Gotham/Gotham-Light.otf");
 }
 
 @font-face {
   font-family: "Gotham-Medium";
-  src: url("../public/fonts/Gotham/Gotham-Medium.otf");
+  src: url("../../public/fonts/Gotham/Gotham-Medium.otf");
 }
 
 @font-face {
   font-family: "Gotham-Book";
-  src: url("../public/fonts/Gotham/Gotham-Book.otf");
+  src: url("../../public/fonts/Gotham/Gotham-Book.otf");
 }
 
 

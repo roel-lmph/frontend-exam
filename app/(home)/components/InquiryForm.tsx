@@ -12,7 +12,7 @@ export default function InquiryForm() {
     const { setActiveModal } = useModal()
     return (
         <>
-            <div className="text-[41px] font-gothamLight">
+            <div className="font-gothamLight text-[41px]">
                 Find a Lawyer for your Legal Issue
             </div>
             <div className="text-[29px]">
@@ -31,7 +31,7 @@ export default function InquiryForm() {
                                 <CategorySelect />
                             </div>
                             <p className="text-center font-gothamBook">
-                                Can't find your category? <span onClick={() => setActiveModal('other-categories')} className="link underline underline-offset-2">Click here.</span>
+                                Can&apos;t find your category? <span onClick={() => setActiveModal('other-categories')} className="link underline underline-offset-2">Click here.</span>
                             </p>
                         </div>
                     </div>

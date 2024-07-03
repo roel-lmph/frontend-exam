@@ -46,16 +46,16 @@ export default function ClientReviewsModal() {
                         />
                     </div>
                 </div>
-                <hr />
+                <hr className='py-2' />
                 <RatingItem title={<b>Overall</b>} rating={5} />
                 {ratings.map(rating => {
                     return (
                         <RatingItem key={rating.title} {...rating} />
                     )
                 })}
-                <hr />
+                <hr className='py-2' />
 
-                <div className='flex items-center space-x-2'>
+                <div className='flex items-center space-x-2 pt-2 pb-1'>
                     <Image
                         src={fiveStars}
                         alt="Five Stars"
@@ -65,9 +65,9 @@ export default function ClientReviewsModal() {
                         by Dexter Marchal, 06/10/2016
                     </div>
                 </div>
-                <p>
-                    Deb did a great job. Got my bench warrant set aside... was sure I was going to jail ... phew.
-                    Judge seemed to respect her and I got what I</p>
+                <p className='font-light'>
+                    <small>Deb did a great job. Got my bench warrant set aside... was sure I was going to jail ... phew.
+                        Judge seemed to respect her and I got what I</small></p>
             </div>
 
         </Modal>

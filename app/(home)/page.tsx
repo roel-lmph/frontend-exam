@@ -12,7 +12,6 @@ export default function Home() {
       <Header />
       <main id="content" className="bg-gradient-to-br from-[#042F6E] to-white">
         <div className="container">
-
           <InquiryForm />
         </div>
       </main>
