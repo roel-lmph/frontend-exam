@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main id="content" className="bg-gradient-to-br from-[#042F6E] to-white">
+      <main id="content">
         <div className="container">
           <InquiryForm />
         </div>

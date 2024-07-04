@@ -52,6 +52,9 @@ textarea {
   padding-top: 35px;
   background: #042F6E;
   color: #fff;
+  background-image: url("/images/glow-bg-blue.png");
+  background-size: cover;
+  background-position: center;
 }
 
 .link {
