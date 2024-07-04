@@ -91,3 +91,34 @@ textarea {
   margin-top: 5px;
   color: #919aa2;
 }
+
+span.address {
+  font-weight: normal;
+  font-family: "Gotham-Light";
+  font-size: 85%;
+}
+
+span.categories {
+  font-weight: normal;
+  font-family: "Gotham-Light";
+  font-size: 90%;
+  padding: 5px 0;
+  display: flex;
+}
+
+li.category {
+  font-size: 90%;
+}
+
+.footer-text {
+  font-family: "Gotham-Light";
+}
+
+.footer-text p {
+  font-family: "Gotham-Light";
+  font-size: 14px;
+}
+
+.review h3 {
+  font-size: 20px;
+}

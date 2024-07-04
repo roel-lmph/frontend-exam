@@ -20,10 +20,10 @@ export default function RatingItem({
         priority
     />
     return (
-        <div className='flex justify-between items-center'>
-            <div className='text-xs'>
+        <div className='flex justify-between items-center mb-2'>
+            <p className='text-xs pt-1'>
                 {title}
-            </div>
+            </p>
             {starIcon}
         </div>
     )

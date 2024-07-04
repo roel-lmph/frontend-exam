@@ -28,7 +28,7 @@ export default function ClientReview(props: ClientReviewProps) {
                         priority
                     /></span>
                     <p>{props.name}</p>
-                    <span>{props.address}</span>
+                    <span className='address'>{props.address}</span>
                 </div>
                 <div>
                     <div className="flex space-x-4 items-center">

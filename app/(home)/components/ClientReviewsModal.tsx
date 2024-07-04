@@ -18,7 +18,7 @@ export default function ClientReviewsModal() {
 
     return (
         <Modal name={modalName} open={isOpen} title='CLIENT REVIEWS' showFooterClose={true}>
-            <div className=''>
+            <div className='review'>
                 <div className='flex'>
 
                     <div className="text-nowrap flex flex-col items-center min-w-32">
@@ -30,14 +30,14 @@ export default function ClientReviewsModal() {
 
                     </div>
                     <div>
-                        <p>{review.name}</p>
-                        <span className='text-gray-300'>{review.address}</span>
-                        <p>{review.category}</p>
+                        <h3 className='font-bold'>{review.name}</h3>
+                        <span className='text-gray-600'>{review.address}</span>
+                        <p className='font-bold'>{review.category}</p>
                     </div>
                 </div>
 
-                <div className='flex items-center'>
-                    <h1>Rating <small>(29 users)</small></h1>
+                <div className='flex items-center mt-2 mb-1'>
+                    <h1 className='font-semibold'>Rating <small>(29 users)</small></h1>
                     <div className='ml-2'>
                         <Image
                             src={fiveStars}
@@ -61,7 +61,7 @@ export default function ClientReviewsModal() {
                         alt="Five Stars"
                         priority
                     />
-                    <div>
+                    <div className='font-semibold'>
                         by Dexter Marchal, 06/10/2016
                     </div>
                 </div>

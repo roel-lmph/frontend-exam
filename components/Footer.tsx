@@ -21,7 +21,7 @@ export default function Footer() {
                             className="col-span-12 md:col-span-6 lg:col-span-7 text-center footer-text"
                         >
                             <div className="flex justify-center items-center">
-                                <div className="flex space-x-4 pb-5 text-gray-300">
+                                <div className="flex space-x-4 pb-5 text-gray-900">
                                     <div className="p-2"><a href="#">User Agreement</a></div>
                                     <div className="dot"><span>&#x25CF;</span></div>
                                     <div className="p-2"><a href="#">Privacy Policy</a></div>
@@ -29,12 +29,13 @@ export default function Footer() {
                                     <div className="p-2"><a href="#">Site Map</a></div>
                                 </div>
                             </div>
-                            <small className="text-gray-300">
+                            <p><small className="text-gray-900">
                                 Copyright 1999-2016 LegalMatch. All rights reserved. LegalMatch®,
                                 <br />
                                 the LegalMatch logo, and the tradedress are trademarks of
                                 LegalMatch. Patents Pending.
                             </small>
+                            </p>
                         </div>
                         <div className="col-span-12 md:col-span-6 lg:col-span-2 float-right">
                             <div className="items-right">

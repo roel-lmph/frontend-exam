@@ -54,11 +54,11 @@ export default function CategorySelect() {
                     </div>
                 </div>
                 {showDropdown && (
-                    <div ref={ref} id="dropdown" className="absolute w-full z-10 bg-white divide-y divide-gray-100 rounded-lg shadow text-gray-400 mt-1">
+                    <div ref={ref} id="dropdown" className="absolute w-full z-10 bg-white divide-y divide-gray-100 rounded-lg shadow text-gray-400 mt-1 p-4">
                         <ul className="py-2 text-sm " >
                             {categories.map(cat => {
                                 return <li key={cat} onClick={() => handleSelect(cat)}>
-                                    <a href="#" className="block px-4 py-2 hover:bg-[#bcd3e3] hover:text-black">{cat}</a>
+                                    <a href="#" className="block px-4 py-2 hover:bg-[#bcd3e3] hover:text-black categpry">{cat}</a>
                                 </li>
                             })}
                         </ul>

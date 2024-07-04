@@ -43,7 +43,7 @@ export default function Modal({ name, open, children, title, showFooterClose = f
     }
 
     return (
-        <dialog ref={dialogRef} className="relative overflow-visible backdrop:bg-black/85 bg-transparent">
+        <dialog ref={dialogRef} className="relative overflow-visible backdrop:bg-black/85 bg-transparent font-gothamLight">
             <div
                 className="bg-white max-h-[90vh] max-w-[90vw] rounded-md px-4 ">
                 {title && <div className='px-7 py-4'>
